@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>my-form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="images">
-            <img src="images/photo.jpg" alt="cyber train inside by Denley Jones" width="900px">
             <div class="logo">
                 <img src="images/odin-lined.png" alt="odin logo">
+                <h1>ODIN</h1>
             </div>
+            <img src="images/photo.jpg" alt="cyber train inside by Denley Jones">
         </div>
         
         <div class="content">
@@ -24,38 +25,46 @@
 
             <div class="form">
                 <h1>Let's do this!</h1>
-                    <form action="#" method="post">
+                    <form id="person">
                         <ul>
-                            <li><label for="fname"> first name
-                                <input type="text" id="fName" name="fName"></label>
+                            <li>
+                                <label for="fname">FIRST NAME</label>
+                                <input type="text" id="fName" name="fName" maxlength="15" minlength="2" required>
                             </li>
 
-                            <li><label for="lname">last name
-                                <input type="text" id="lname" name="lname"></label>
+                            <li>
+                                <label for="lname">LAST NAME</label>
+                                <input type="text" id="lname" name="lname" maxlength="36" minlength="2" required>
                             </li>
 
-                            <li><label for="mail">email
-                                <input type="email" id="mail" name="email"></label>
+                            <li>
+                                <label for="mail">EMAIL</label>
+                                <input type="email" id="mail" name="email" required>
                             </li>
 
-                            <li><label for="phone">phone number
-                                <input type="tel" id="number" name="number"></label>
+                            <li>
+                                <label for="phone">PHONE NUMBER</label>
+                                <input type="tel" id="number" name="number" required>
                             </li>
 
-                            <li><label for="password">password
-                                <input type="password" id="password" name="password"></label>
+                            <li>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" id="password" name="password" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^\w\s]).{8,}" required>
                             </li>
 
-                            <li><label for="confirm">confirm password
-                                <input type="password" id="confirm"></label>
+                            <li>
+                                <label for="confirm">CONFIRM PASSWORD</label>
+                                <input type="password" id="confirm" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^\w\s]).{8,}" required>
                             </li>
                         </ul>
+                        <legend>Blue fiels are required</legend>
+                        <legend>The password must contain at least one letter, one uppercase letter, one number and a special character</legend>
                     </form>
 
-                    <button type="submit">Create Account</button>
+                    <button type="submit" form="person">Create Account</button>
             </div>
-            
-            <p>Already hav an account?<a href="#">Log in</a></p>
+
+            <p>Already have an account? <a href="#">Log in</a></p>
         </div>
     </div>
 </body>
